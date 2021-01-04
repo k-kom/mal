@@ -4,5 +4,5 @@ STEP=${STEP:-stepA_mal}
 if [ "${clojure_MODE}" = "cljs" ]; then
   exec lumo -c $(dirname $0)/src -m mal.${STEP//_/-} "${@}"
 else
-  exec java -jar ../my-clojure/target/${STEP}.jar "${@}"
+  exec java -jar my-clojure/target/${STEP}.jar "${@}"
 fi
